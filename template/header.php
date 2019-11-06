@@ -16,6 +16,8 @@
   <link rel="stylesheet" type="text/css" href="assets/css/datatables.min.css">
   <!-- CSS Files -->
   <link href="./assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="./assets/css/style.css" rel="stylesheet" />
 </head>
 <body class="">
     <!-- Header -->

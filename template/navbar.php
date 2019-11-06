@@ -77,7 +77,7 @@
           </div>
         </div>
         <!-- Form -->
-        <form class="mt-4 mb-3 d-md-none">
+        <!-- <form class="mt-4 mb-3 d-md-none">
           <div class="input-group input-group-rounded input-group-merge">
             <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
             <div class="input-group-prepend">
@@ -86,7 +86,7 @@
               </div>
             </div>
           </div>
-        </form>
+        </form> -->
         <!-- Navigation -->
         <ul class="navbar-nav">
           <li class="nav-item  class=" active" ">
@@ -156,7 +156,7 @@
         <!-- Brand -->
         <a class="h4 mb-0 text-white text-uppercase d-none d-lg-inline-block" href="./index.html">Dashboard</a>
         <!-- Form -->
-        <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
+        <!-- <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto">
           <div class="form-group mb-0">
             <div class="input-group input-group-alternative">
               <div class="input-group-prepend">
@@ -165,7 +165,7 @@
               <input class="form-control" placeholder="Search" type="text">
             </div>
           </div>
-        </form>
+        </form> -->
         <!-- User -->
         <ul class="navbar-nav align-items-center d-none d-md-flex">
           <li class="nav-item dropdown">
