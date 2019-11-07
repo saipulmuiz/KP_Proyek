@@ -9,14 +9,14 @@
       echo "
             <script>
               alert('Data Petugas Berhasil Ditambahkan!');
-              document.location.href = 'index.php';
+              document.location.href = '?module=petugas';
             </script>
       ";
     }else{
       echo "
             <script>
               alert('Gagal Menyimpan Data!');
-              document.location.href = 'index.php';
+              document.location.href = '?module=petugas';
             </script>
       ";
     }
@@ -26,14 +26,14 @@
       echo "
             <script>
               alert('Data Petugas Berhasil Diubah!');
-              document.location.href = 'index.php';
+              document.location.href = '?module=petugas';
             </script>
       ";
     }else{
       echo "
             <script>
               alert('Gagal Mengubah Data!');
-              document.location.href = 'index.php';
+              document.location.href = '?module=petugas';
             </script>
       ";
     }
@@ -43,14 +43,14 @@
       echo "
             <script>
               alert('Data Petugas Berhasil Dihapus!');
-              document.location.href = 'index.php';
+              document.location.href = '?module=petugas';
             </script>
       ";
     }else{
       echo "
             <script>
               alert('Gagal Menghapus Data!');
-              document.location.href = 'index.php';
+              document.location.href = '?module=petugas';
             </script>
       ";
     }
@@ -120,6 +120,12 @@
                               <label>Username</label>
                               <input type="text" name="username" class="form-control" value="<?= $row['username']; ?>" required>
                             </div>
+                            <div class="form-group">
+                              <label>Foto</label>
+                              <span class="avatar avatar-lg rounded-circle">
+                                <img alt="Foto Profile" src="./uploads/<?= $row['foto']; ?>">
+                              </span>
+                            </div>
                           </div>
                           <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Kembali">
@@ -165,7 +171,7 @@
 <div id="addModal" class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
-      <form method="post">
+      <form method="post" enctype="multipart/form-data">
         <div class="modal-header">
           <h4 class="modal-title">Tambah Petugas</h4>
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -182,6 +188,10 @@
           <div class="form-group">
             <label>Alamat</label>
             <textarea type="text" name="alamat" class="form-control" required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Foto</label>
+            <input type="file" name="foto" class="form-control" required>
           </div>
           <div class="form-group">
             <label>Username</label>

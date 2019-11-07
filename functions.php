@@ -19,9 +19,15 @@
         $username = strtolower(stripslashes($data['username']));
         $pass = md5($data['password']);
 
+        // Upload Foto
+        $foto = upload();
+        if(!$foto){
+            return false;
+        }
+
         // Query insert data
-        $query = "INSERT INTO petugas (nama,no_hp,alamat,username,password)
-        VALUES('$nama','$nope','$alamat','$username','$pass')";
+        $query = "INSERT INTO petugas (nama,no_hp,alamat,username,password,foto)
+        VALUES('$nama','$nope','$alamat','$username','$pass','$foto')";
         mysqli_query($koneksi, $query);
 
         return mysqli_affected_rows($koneksi);
@@ -34,7 +40,7 @@
         $nope = htmlspecialchars($data['nope']);
         $alamat = htmlspecialchars($data['alamat']);
         $username = strtolower(stripslashes($data['username']));
-    
+        
         //query update data
         $query = "UPDATE petugas SET
               nama = '$nama',
@@ -53,4 +59,23 @@
     
         return mysqli_affected_rows($koneksi);
     }
+
+    function upload(){
+        $namaFoto = $_FILES['foto']['name'];
+        $errorFoto = $_FILES['foto']['error'];
+        $tmpName = $_FILES['foto']['tmp_name'];
+        $ektensiFoto = explode('.',$namaFoto);
+        $ektensiFoto = end($ektensiFoto);
+        $fotoBaru = uniqid(5);
+        $fotoBaru .= ".".$ektensiFoto;
+
+        if($errorFoto == 0){
+            $gambar = $fotoBaru;
+            move_uploaded_file($tmpName,'uploads/'.$gambar);
+
+        } elseif ($errorFoto == 4) {
+            $gambar = "default.png";
+        }
+        return $gambar;
+        }
  ?>
