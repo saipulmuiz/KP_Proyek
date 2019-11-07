@@ -1,12 +1,16 @@
 <?php 
     include './template/navbar.php';
     include './template/header.php';
- ?>
+?>
 
-<?php 
-    include './template/tabel_petugas.php';
- ?>
+<div class="modul">
+    <?php 
+        include 'module.php';
+    ?>
+</div>
 
-<?php 
-    include './template/footer.php';
- ?>
+<div class="footer">
+    <?php 
+        include './template/footer.php';
+    ?>
+</div>

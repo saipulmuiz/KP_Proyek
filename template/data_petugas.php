@@ -140,8 +140,8 @@
                           </div>
                           <div class="modal-body">
                             <input type="hidden" name="hapus_id" value="<?php echo $id; ?>">
-                            <p>Kamu yakin ingin menghapus petugas dengan ID = <?php echo $id; ?>?</p>
-                            <p class="text-warning"><small>Ini akan menghapus data petugas.</small></p>
+                            <p>Kamu yakin ingin menghapus <b><?= $row['nama']; ?></b> dari data petugas?</p>
+                            <p class="text-warning"><small>Ini akan menghapus data petugas dengan nama <b><?= $row['nama']; ?></b>.</small></p>
                           </div>
                           <div class="modal-footer">
                             <input type="button" class="btn btn-default" data-dismiss="modal" value="Kembali">
