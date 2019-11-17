@@ -6,6 +6,7 @@
     elseif($module == "keluar") include("keluar.php");
 
     elseif($module == "petugas") include("./template/data_petugas.php");
+    elseif($module == "kandang") include("./template/data_kandang.php");
 
     else echo "Modul Tidak Ada!";
  ?>

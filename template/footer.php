@@ -27,7 +27,6 @@
     </div>
   </div>
   <!--   Core   -->
-  <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
   <script src="./assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <!--   Optional JS   -->
   <script src="./assets/js/plugins/chart.js/dist/Chart.min.js"></script>

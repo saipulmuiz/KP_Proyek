@@ -90,6 +90,11 @@
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link " href="?module=kandang">
+              <i class="ni ni-bullet-list-67 text-red"></i> Data Kandang
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link " href="./examples/profile.html">
               <i class="ni ni-single-02 text-yellow"></i> User profile
             </a>

@@ -78,4 +78,17 @@
         }
         return $gambar;
         }
+
+        function tambah_kandang($data){
+            global $koneksi;
+            $kapasitas = htmlspecialchars($data['kapasitas']);
+            $jml_ayam = htmlspecialchars($data['jml_ayam']);
+    
+            // Query insert data
+            $query = "INSERT INTO kandang (kapasitas,jml_ayam)
+            VALUES('$kapasitas','$jml_ayam')";
+            mysqli_query($koneksi, $query);
+    
+            return mysqli_affected_rows($koneksi);
+        }
  ?>

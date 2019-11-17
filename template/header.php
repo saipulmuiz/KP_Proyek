@@ -18,6 +18,8 @@
   <link href="./assets/css/argon-dashboard.css?v=1.1.0" rel="stylesheet" />
   <!-- CSS Files -->
   <link href="./assets/css/style.css" rel="stylesheet" />
+   <!-- Jquery File -->
+   <script src="./assets/js/plugins/jquery/dist/jquery.min.js"></script>
 </head>
 <body class="">
     <!-- Header -->
