@@ -2,7 +2,6 @@
   include 'config.php';
   require 'functions.php';
   
-  $kandang = query("SELECT * FROM kandang");
  ?>
 <div class="container-fluid mt--7">
   <!-- Table -->

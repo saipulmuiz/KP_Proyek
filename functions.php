@@ -26,7 +26,7 @@
         }
 
         // Query insert data
-        $query = "INSERT INTO petugas (nama,no_hp,alamat,username,password,foto)
+        $query = "INSERT INTO tbl_petugas (nama,no_hp,alamat,username,password,foto)
         VALUES('$nama','$nope','$alamat','$username','$pass','$foto')";
         mysqli_query($koneksi, $query);
 
@@ -42,7 +42,7 @@
         $username = strtolower(stripslashes($data['username']));
         
         //query update data
-        $query = "UPDATE petugas SET
+        $query = "UPDATE tbl_petugas SET
               nama = '$nama',
               no_hp = '$nope',
               alamat = '$alamat',
@@ -55,7 +55,7 @@
     function hapus_petugas($data){
         global $koneksi;
         $hapus_id = $data['hapus_id'];
-        mysqli_query($koneksi, "DELETE FROM petugas WHERE id_petugas = $hapus_id");
+        mysqli_query($koneksi, "DELETE FROM tbl_petugas WHERE id_petugas = $hapus_id");
     
         return mysqli_affected_rows($koneksi);
     }
@@ -85,7 +85,7 @@
             $jml_ayam = htmlspecialchars($data['jml_ayam']);
     
             // Query insert data
-            $query = "INSERT INTO kandang (kapasitas,jml_ayam)
+            $query = "INSERT INTO tbl_kandang (kapasitas,jml_ayam)
             VALUES('$kapasitas','$jml_ayam')";
             mysqli_query($koneksi, $query);
     

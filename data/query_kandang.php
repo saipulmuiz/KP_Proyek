@@ -4,7 +4,7 @@
     if (isset($_POST['tambah'])) {
           $kapasitas = $_POST['kapasitas'];
           $jml_ayam = $_POST['jml_ayam'];
-          $sql = "INSERT INTO kandang (kapasitas,jml_ayam)VALUES('$kapasitas','$jml_ayam')";
+          $sql = "INSERT INTO tbl_kandang (kapasitas,jml_ayam)VALUES('$kapasitas','$jml_ayam')";
           if (mysqli_query($koneksi, $sql)) {
             $id = mysqli_insert_id($koneksi);
           }else {
@@ -15,7 +15,7 @@
     if (isset($_POST['ubah'])) {
           $kapasitas = $_POST['kapasitas'];
           $jml_ayam = $_POST['jml_ayam'];
-          $sql = "UPDATE kandang   
+          $sql = "UPDATE tbl_kandang   
           SET kapasitas='$kapasitas',   
           jml_ayam='$jml_ayam' WHERE id_kandang = '".$_POST["id_kandang"]."'";
           if (mysqli_query($koneksi, $sql)) {
@@ -26,7 +26,7 @@
           exit();
       }
     if (isset($_POST['hapus'])) {
-          $sql = "DELETE FROM kandang WHERE id_kandang = '".$_POST["hapus_id"]."'";
+          $sql = "DELETE FROM tbl_kandang WHERE id_kandang = '".$_POST["hapus_id"]."'";
           if (mysqli_query($koneksi, $sql)) {
             $id = mysqli_insert_id($koneksi);
           }else {
@@ -35,7 +35,7 @@
           exit();
       }
     if (isset($_POST['id_kandang'])) {
-        $query = "SELECT * FROM kandang WHERE id_kandang = '".$_POST["id_kandang"]."'";  
+        $query = "SELECT * FROM tbl_kandang WHERE id_kandang = '".$_POST["id_kandang"]."'";  
         $result = mysqli_query($koneksi, $query);  
         $row = mysqli_fetch_array($result);  
         echo json_encode($row); 

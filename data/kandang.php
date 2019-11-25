@@ -5,9 +5,9 @@ include '../config.php';
 $search = $_POST['search']['value']; // Ambil data yang di ketik user pada textbox pencarian
 $limit = $_POST['length']; // Ambil data limit per page
 $start = $_POST['start']; // Ambil data start
-$sql = mysqli_query($koneksi, "SELECT id_kandang FROM kandang"); // Query untuk menghitung seluruh data siswa
+$sql = mysqli_query($koneksi, "SELECT id_kandang FROM tbl_kandang"); // Query untuk menghitung seluruh data siswa
 $sql_count = mysqli_num_rows($sql); // Hitung data yg ada pada query $sql
-$query = "SELECT * FROM kandang WHERE (id_kandang LIKE '%".$search."%' OR kapasitas LIKE '%".$search."%' OR jml_ayam LIKE '%".$search."%')";
+$query = "SELECT * FROM tbl_kandang WHERE (id_kandang LIKE '%".$search."%' OR kapasitas LIKE '%".$search."%' OR jml_ayam LIKE '%".$search."%')";
 $order_field = $_POST['order'][0]['column']; // Untuk mengambil nama field yg menjadi acuan untuk sorting
 $order_ascdesc = $_POST['order'][0]['dir']; // Untuk menentukan order by "ASC" atau "DESC"
 $order = " ORDER BY ".$_POST['columns'][$order_field]['data']." ".$order_ascdesc;
